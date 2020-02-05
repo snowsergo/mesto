@@ -9,24 +9,4 @@
 @import url(/src/blocks/places-list/places-list.css);
 @import url(/src/blocks/place-card/place-card.css);
 @import url(/src/blocks/popup/popup.css);
-@import url(/src/blocks/popup/popup.css);
-body {
-  background-color: #000;
-}
-
-
-#error-name{
-  top:173px;
-}
-
-#error-job{
-  top:245px;
-}
-
-#error-place{
-  top:173px;
-}
-
-#error-link{
-  top:245px;
-}
+body{background-color:#000}#error-name{top:173px}#error-job{top:245px}#error-place{top:173px}#error-link{top:245px}
