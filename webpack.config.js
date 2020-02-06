@@ -30,10 +30,7 @@ module.exports = {
           "postcss-loader"
         ]
       },
-      {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"]
-      },
+      
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
         use: [
