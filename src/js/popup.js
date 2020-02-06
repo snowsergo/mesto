@@ -1,4 +1,4 @@
-class Popup {
+export default class Popup {
     constructor() {}
   
     renderLoading(isLoading) {
@@ -14,6 +14,7 @@ class Popup {
     }
     
     setImageLink(event) {
+      const popupPic = document.querySelector(".popup__pic");
       const imageStyle = String(event.target.getAttribute("style"));
       const imageLink = imageStyle.substring(22, imageStyle.length - 1);
       popupPic.setAttribute("src", imageLink);
@@ -30,6 +31,7 @@ class Popup {
     }
   
     removeErrorMessages() {
+      const errors = document.querySelectorAll(".error-message");
       errors.forEach(elem => elem.classList.remove("error-message__visible"));
     }
   

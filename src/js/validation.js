@@ -6,8 +6,10 @@ const words = { ru: {} };
 * можно сделать допустим метод который будет аккамулировать несколько методов
 const validation = new Validation(words);
 */
+import {message} from '../js/validation-messages.js';
+import {nameInput,jobInput,placeInput,cardForm} from '../index.js';
 
-class Validation {
+export default class Validation {
   constructor() {}
 
   checkLink() {
@@ -91,6 +93,7 @@ class Validation {
   }
   //проверка формы карточки
   cardValidate() {
+    //const placeInput = document.querySelector("#place");
     const popupCardButton = document.querySelector(".popup__card-add-button");
     if (placeInput.validity.valid && this.checkLink()) {
       popupCardButton.classList.add("popup__button-is-active");
@@ -103,6 +106,8 @@ class Validation {
   // проверка формы пользователя
   userValidate() {
     const popupUserButton = document.querySelector(".popup__user-add-button");
+    //const nameInput = document.querySelector("#name");
+    //const jobInput = document.querySelector("#job");
     if (nameInput.validity.valid && jobInput.validity.valid) {
       popupUserButton.classList.add("popup__button-is-active");
       popupUserButton.removeAttribute("disabled");
@@ -117,4 +122,4 @@ class Validation {
       this.inputLinkValidate(event.target);
     } else this.inputValidate(event.target);
   }
-}
+};

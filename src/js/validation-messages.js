@@ -5,4 +5,6 @@ const message = {
     validationLink: "Здесь должна быть ссылка",
     validationDone: ""
   }
-};
+}
+
+export{message};

@@ -1,4 +1,6 @@
-class Card {
+import {placesList} from '../index.js';
+
+export default class Card {
   constructor() {}
 
   getCardId(obj) {

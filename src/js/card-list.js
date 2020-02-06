@@ -1,4 +1,6 @@
-class Cardlist {
+import {ownerId} from '../js/server-info.js';
+
+export default class Cardlist {
   constructor() {}
 
   addCard(name, link, id) {
@@ -25,6 +27,7 @@ class Cardlist {
     const newCardName = document.createElement("h3");
     const newCardLikes = document.createElement("p");
     const newLikeButton = document.createElement("button");
+    const placesList = document.querySelector(".places-list");
 
     newDelButton.classList.add("place-card__delete-icon");
     if (obj.isOwner) {

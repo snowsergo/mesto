@@ -1,4 +1,4 @@
-class User {
+export default class User {
   constructor() {}
   //Можно лучше: Не забываем про event на вход.(исправил)
   change(obj) {

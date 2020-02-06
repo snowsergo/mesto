@@ -1,6 +1,16 @@
 console.log("Hello from index.js");
 import './pages/index.css';
 
+import Api from '../src/js/api.js';
+import Cardlist from '../src/js/card-list.js';
+import Card from '../src/js/card.js';
+import Popup from '../src/js/popup.js';
+import {server, token} from '../src/js/server-info.js';
+import User from '../src/js/user.js';
+//import message from '../src/js/validation-messages.js';
+import Validation from '../src/js/validation.js';
+
+
 //   Токен: c66b50f5-8822-4a68-8668-3460b8d083f5
 //   Идентификатор группы: cohort6
 // 95.216.175.5
@@ -8,13 +18,13 @@ import './pages/index.css';
 
 //-------------------------------------- Переменные------------------------------------
 
-const placesList = document.querySelector(".places-list");
+export const placesList = document.querySelector(".places-list");
 const popup = document.querySelector(".popup");
 const popupEdit = document.querySelector(".popup-edit");
 const popupImage = document.querySelector(".popup-image");
 
-const popupPic = document.querySelector(".popup__pic");
-const errors = document.querySelectorAll(".error-message");
+
+//const errors = document.querySelectorAll(".error-message");
 
 const api = new Api();
 const card = new Card();
@@ -24,14 +34,14 @@ const userObj = new User();
 const validObj = new Validation();
 const root = document.querySelector(".root");
 
-const nameInput = document.querySelector("#name");
-const jobInput = document.querySelector("#job");
+export const nameInput = document.querySelector("#name");
+export const jobInput = document.querySelector("#job");
 
-const placeInput = document.querySelector("#place");
+export const placeInput = document.querySelector("#place");
 const linkInput = document.querySelector("#link");
 
-const cardForm = document.forms.card;
-const userForm = document.forms.user;
+export const cardForm = document.forms.card;
+export const userForm = document.forms.user;
 
 //---------------------------------1. Загрузка информации о пользователе с сервера---------------------------------
 api.getUserInfo(server, token).then(result => {
@@ -98,7 +108,8 @@ function handlePopup(event) {
     return;
     //надо исправить: удалите else оно лишнее, добавьте return для выхода (исправил)
   }
-  if (event.target.id == "place-close") {
+  if (event.target.id === "place-close") {
+  
     // используйте строгое сравнение
     cardForm.reset();
     popupObj.close(popup);
