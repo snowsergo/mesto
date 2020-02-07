@@ -1,5 +1,5 @@
-console.log("Hello from index.js");
-import './pages/index.css';
+
+import '../src/pages/index.css';
 
 import Api from '../src/js/api.js';
 import Cardlist from '../src/js/card-list.js';
@@ -7,7 +7,6 @@ import Card from '../src/js/card.js';
 import Popup from '../src/js/popup.js';
 import {server, token} from '../src/js/server-info.js';
 import User from '../src/js/user.js';
-//import message from '../src/js/validation-messages.js';
 import Validation from '../src/js/validation.js';
 
 
