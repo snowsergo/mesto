@@ -1,6 +1,6 @@
 export default class User {
   constructor() {}
-  //Можно лучше: Не забываем про event на вход.(исправил)
+
   change(obj) {
     const name = document.querySelector(".user-info__name");
     const job = document.querySelector(".user-info__job");
