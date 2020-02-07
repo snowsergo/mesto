@@ -17,15 +17,13 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        use: {loader: "babel-loader"},
+        exclude: /node_modules/
       },
       {
         test: /\.css$/i,
         use: [
-          isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+          (isDev ? "style-loader" : MiniCssExtractPlugin.loader),
           "css-loader",
           "postcss-loader"
         ]
@@ -57,7 +55,6 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      //
       filename: "style.[contenthash].css"
     }),
     new OptimizeCssAssetsPlugin({
