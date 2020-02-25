@@ -1,4 +1,6 @@
-class Cardlist {
+import {ownerId} from '../js/server-info.js';
+
+export default class Cardlist {
   constructor() {}
 
   addCard(name, link, id) {
@@ -11,12 +13,6 @@ class Cardlist {
       isLiked: false
     };
     return card;
-
-    //Можно лучше: Внутри классов не стоит использовать экземпляры других классов. (исправил)
-    // Классы должны быть независимы друг от друга. (исправил)
-    // Всё взаимодействие описываем в управляемом файле. script.js (исправил)
-    // валидации здесь не должно быть (исправил)
-    // Нельхя из класса обращаться к card, можете передавать как парамерт в класс
   }
 
   render(obj) {
@@ -25,6 +21,7 @@ class Cardlist {
     const newCardName = document.createElement("h3");
     const newCardLikes = document.createElement("p");
     const newLikeButton = document.createElement("button");
+    const placesList = document.querySelector(".places-list");
 
     newDelButton.classList.add("place-card__delete-icon");
     if (obj.isOwner) {

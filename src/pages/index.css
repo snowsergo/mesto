@@ -1,13 +1,36 @@
+/*
+@import url(src/vendor/normalize.css);
+@import url(/src/vendor/fonts.css);
+@import url(/src/blocks/root/root.css);
+@import url(/src/blocks/header/header.css);
+@import url(/src/blocks/logo/logo.css);
+@import url(/src/blocks/profile/profile.css);
+@import url(/src/blocks/user-info/user-info.css);
+@import url(/src/blocks/button/button.css);
+@import url(/src/blocks/places-list/places-list.css);
+@import url(/src/blocks/place-card/place-card.css);
+@import url(/src/blocks/popup/popup.css);
+*/
 @import url(../vendor/normalize.css);
+
 @import url(../vendor/fonts.css);
+
 @import url(../blocks/root/root.css);
+
 @import url(../blocks/header/header.css);
+
 @import url(../blocks/logo/logo.css);
+
 @import url(../blocks/profile/profile.css);
+
 @import url(../blocks/user-info/user-info.css);
+
 @import url(../blocks/button/button.css);
+
 @import url(../blocks/places-list/places-list.css);
+
 @import url(../blocks/place-card/place-card.css);
+
 @import url(../blocks/popup/popup.css);
 
 body {

@@ -1,4 +1,4 @@
-class Api {
+export default class Api {
   constructor() {}
   //  Надо исправить: Необходимо в метод добавить обработку ошибок
   //    .catch((err) => {
